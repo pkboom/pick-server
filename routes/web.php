@@ -7,21 +7,20 @@ use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    // get update time of file
     return view('pick');
 });
 
 Route::get('dump', function () {
     $updateTime = filemtime(Config::get('pick.file'));
-    logger(time());
 
     if ($updateTime !== Cache::get('pick_time')) {
         Cache::put('pick_time', filemtime(Config::get('pick.file')));
 
         $data = file_get_contents(Config::get('pick.file'));
 
-        dump($data);
-        dump($data);
+        collect(json_decode($data, true))->each(function ($dump) {
+            dump($dump);
+        });
     }
 });
 
