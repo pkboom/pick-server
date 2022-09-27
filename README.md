@@ -4,7 +4,7 @@ This is a server that [laravel-pick](https://github.com/pkboom/laravel-pick) sen
 
 # Usage
 
-Use `pick()` in your app.
+After installing [laravel-pick](https://github.com/pkboom/laravel-pick), use `pick()` in your app.
 
 ```php
 Route::get('/', function () {
