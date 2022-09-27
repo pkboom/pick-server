@@ -12,7 +12,7 @@
     setInterval(dump, 1000);
 
     function dump() {
-      fetch('http://pick.test/dump')
+      fetch('http://pick-server.test/dump')
         .then((response) => response.text())
         .then((html) => {
           if (!html) return
