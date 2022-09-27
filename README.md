@@ -1,6 +1,6 @@
 # Pick Server
 
-This is a server that `laravel-pick` sends data to.
+This is a server that [laravel-pick](https://github.com/pkboom/laravel-pick) sends data to.
 
 # Usage
 
