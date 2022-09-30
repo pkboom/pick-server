@@ -53,7 +53,8 @@
         ],
         "setup": [
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "php artisan key:generate"
+            "php artisan key:generate",
+            "php -r \"file_exists('storage/app/pick.json') || file_put_contents('storage/app/pick.json', '');\""
         ]
     },
     "extra": {
