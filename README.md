@@ -2,6 +2,12 @@
 
 This is a server that [laravel-pick](https://github.com/pkboom/laravel-pick) sends data to.
 
+# Installation
+
+```sh
+composer setup
+```
+
 # Usage
 
 After installing [laravel-pick](https://github.com/pkboom/laravel-pick), use `pick()` in your app.
