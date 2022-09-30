@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <div id="dump">asdf</div>
+  <div id="dump">Pick server running...</div>
   <script>
     setInterval(dump, 1000);
 
