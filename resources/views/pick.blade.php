@@ -8,8 +8,16 @@
 
 <body>
   <div id="dump">Pick server running...</div>
+  <div>
+    <button onclick="stopRefresh()">Stop refreshing</button>
+  </div>
   <script>
-    setInterval(dump, 1000);
+    let interval = setInterval(dump, 1000);
+
+    function stopRefresh() {
+      clearInterval(interval);
+    }
+
 
     function dump() {
       fetch('http://pick-server.test/dump')
