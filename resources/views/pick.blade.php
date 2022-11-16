@@ -7,11 +7,11 @@
 </head>
 
 <body>
-  <div id="dump"></div>
   <div>
     <button onclick="stopRefresh()">Stop refreshing</button>
     <button onclick="refresh()">Refresh</button>
   </div>
+  <div id="dump"></div>
   <script>
     let interval = setInterval(dump, 1000);
 
