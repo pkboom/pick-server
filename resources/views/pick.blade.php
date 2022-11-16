@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <div id="dump">Pick server running...</div>
+  <div id="dump"></div>
   <div>
     <button onclick="stopRefresh()">Stop refreshing</button>
     <button onclick="refresh()">Refresh</button>
