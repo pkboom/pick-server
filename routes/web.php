@@ -19,7 +19,13 @@ Route::get('dump', function () {
         $data = file_get_contents(Config::get('pick.file'));
 
         collect(json_decode($data, true))->each(function ($dump) {
-            dump($dump);
+            if (is_array($dump)) {
+                dump($dump);
+            } else {
+                $unserialized = @unserialize($dump);
+
+                $unserialized ? dump($unserialized) : dump($dump);
+            }
         });
     }
 });
