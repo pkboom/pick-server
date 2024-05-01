@@ -18,6 +18,8 @@ Route::get('dump', function () {
 
         $data = file_get_contents(Config::get('pick.file'));
 
+        dump(time());
+
         collect(json_decode($data, true))->each(function ($dump) {
             if (is_array($dump)) {
                 dump($dump);

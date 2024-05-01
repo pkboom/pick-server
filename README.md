@@ -25,3 +25,27 @@ Route::get('/', function () {
 Open `pick-server.test` and whatever `laravel-pick` sends will appear here.
 
 <img src="image2.png" />
+
+# Update
+
+Check:
+
+-   boostrap/app.php
+-   routs/web.php
+-   resources/views/pick.blade.php
+-   config/pick.php
+
+# Install old laravel
+
+```sh
+composer create-project laravel/laravel project-name 10.0
+```
+
+## Update for old version
+
+Check:
+
+-   app/Http/Middleware/VerifyCsrfToken.php
+-   routs/web.php
+-   resources/views/pick.blade.php
+-   config/pick.php
