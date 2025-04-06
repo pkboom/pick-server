@@ -18,7 +18,7 @@ Route::get('dump', function () {
 
         $data = file_get_contents(Config::get('pick.file'));
 
-        dump(time());
+        dump(date('Y-m-d H:i:s', time()));
 
         collect(json_decode($data, true))->each(function ($dump) {
             if (is_array($dump)) {
