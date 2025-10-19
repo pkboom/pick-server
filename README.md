@@ -6,8 +6,6 @@ This is a server that [laravel-pick](https://github.com/pkboom/laravel-pick) sen
 
 ```sh
 composer setup
-composer update
-php artisan migrate
 ```
 
 # Usage

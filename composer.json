@@ -41,9 +41,13 @@
             "@php artisan migrate --graceful --ansi"
         ],
         "setup": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "php artisan key:generate",
-            "php -r \"file_exists('storage/app/pick.json') || file_put_contents('storage/app/pick.json', '');\""
+            "composer install",
+            "@php -r \"! file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php artisan key:generate",
+            "php -r \"file_exists('storage/app/pick.json') || file_put_contents('storage/app/pick.json', '');\"",
+            "@php artisan migrate --force",
+            "npm install",
+            "npm run build"
         ]
     },
     "extra": {
